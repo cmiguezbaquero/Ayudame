@@ -18,7 +18,7 @@ public class Main {
     // 3. Convierte nombre de planeta en su número de órbita desde el Sol
     public static int numeroOrbita(String planeta) {
 
-        switch (planeta.length()) {
+        switch (planeta) {
             case "Tierra":
                 return 3;
             case "Marte":
@@ -39,16 +39,17 @@ public class Main {
             suma += altitudesKm[i];
             return suma / altitudesKm.length;
         }
+        return suma;
     }
 
-        // 5. Convierte segundos a formato horas:minutos:segundos (útil para misiones espaciales)
-        public static String convertirTiempo (int segundos){
+    // 5. Convierte segundos a formato horas:minutos:segundos (útil para misiones espaciales)
+    public static String convertirTiempo (int segundos){
 
-            int horas = segundos / 3600;
-            int minutos = (segundos % 3600) / 60;
-            int segundosRestantes = segundos % 60;
+        int horas = segundos / 3600;
+        int minutos = (segundos % 3600) / 60;
+        int segundosRestantes = segundos % 60;
 
-            return String.format("%02d:%02d:%02d", horas, minutos, segundosRestantes);
-        }
+        return String.format("%02d:%02d:%02d", horas, minutos, segundosRestantes);
     }
+}
 
